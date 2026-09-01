@@ -56,6 +56,24 @@ A single organization or person may hold multiple roles, including:
 - Retailer
 - Buyer
 
+## Financial Philosophy
+
+SWAFOS treats financial allocation as a configurable business policy rather than hard-coded payout logic.
+
+The reference financial framework is:
+
+`30% Investor / Owner · 30% Operator · 30% Growth Allocation · 10% CSR`
+
+This is a target allocation framework and financial benchmark. Actual cash deployment must consider business continuity, working capital, obligations, debt service, liquidity, and approved expansion decisions.
+
+Growth Allocation may remain retained in a Growth Fund until an expansion or reinvestment opportunity is financially justified.
+
+## Expansion & Optional Capabilities
+
+Expansion decisions can be funded through Growth Fund, existing cash, investor capital, financing, or combinations of these sources. SWAFOS is designed to evaluate funding choices against cash-flow impact and expected business performance.
+
+Delivery is an optional future capability. It may support internal fulfillment and, when economically justified, external delivery services as an additional revenue stream.
+
 ## Reference Deployment
 
 The first real-world validation program begins **1 September 2026** and runs for **19 months**, targeting **Rp500 million** of measurable accumulated business value/cash-equivalent.
@@ -88,6 +106,6 @@ tests/
 
 ## Licensing
 
-SWAFOS is planned as an open-core project. The exact open-source license and commercial module boundaries will be documented through an architecture decision before production distribution.
+SWAFOS Core is planned under **Apache License 2.0**. Commercial modules, hosted services, and other commercial boundaries will be defined separately and explicitly.
 
 Third-party notices will be maintained separately where required.
