@@ -10,6 +10,19 @@ SWAFOS will use an **open-core** product strategy. The open core must provide a 
 
 Commercial value should primarily come from advanced capabilities, hosted services, enterprise requirements, integrations, and operational convenience—not from withholding the fundamental domain model.
 
+## Recommended Core License
+
+The current recommendation is **Apache License 2.0** for the open SWAFOS Core.
+
+This recommendation is based on:
+
+- permissive commercial and modification rights;
+- explicit patent grant;
+- broad compatibility with enterprise adoption and integration;
+- ability for businesses to build proprietary applications around the core without forcing the entire derivative application to become open source.
+
+This is a strategic recommendation, not legal advice. Before the first public distribution release, the project should perform a license/dependency compatibility review and confirm ownership of all distributed code.
+
 ## Open Core
 
 The open core is intended to contain the capabilities required to operate and understand a basic agribusiness:
@@ -23,8 +36,11 @@ The open core is intended to contain the capabilities required to operate and un
 - Basic purchasing and sales
 - Basic settlement records
 - Core cost/revenue/economic model
+- Configurable profit allocation policy
 - Core API/domain engine
 - Basic reporting and KPI primitives
+
+The default 30/30/30/10 allocation is business policy data and remains available to the core; it is not a proprietary feature.
 
 ## Potential Commercial Modules
 
@@ -44,19 +60,11 @@ Commercial packaging may include:
 
 These are candidates, not a final promise. Each commercial module must have a documented boundary.
 
-## Licensing Principle
+## Commercial Packaging
 
-The project should prefer a well-established open-source license for the open core and a separately documented commercial license for proprietary modules where required.
+Proprietary modules/services should live behind explicit interfaces and should not require changing the semantics of the open core.
 
-The exact license pair will be selected only after reviewing:
-
-- contributor model
-- patent considerations
-- SaaS/network-use implications
-- commercial distribution requirements
-- compatibility with third-party dependencies
-
-No license claim should be made for code that is not owned or properly licensed by the project.
+A commercial deployment may use the open core plus proprietary services, but customers should not be forced to purchase proprietary components merely to retain access to their core operational data.
 
 ## Third-Party Code
 
@@ -83,6 +91,7 @@ The project must never remove legally required attribution or notices merely to 
 4. Avoid proprietary dependencies in the core unless there is a strong architectural reason.
 5. Document commercial capabilities separately from core domain semantics.
 6. Keep the data model portable enough to avoid customer lock-in.
+7. Treat business allocation policies as configurable domain data, not licensing controls.
 
 ## Consequences
 
@@ -92,14 +101,15 @@ The project must never remove legally required attribution or notices merely to 
 - Commercial services can fund sustained development.
 - Customers can self-host core capabilities.
 - Domain architecture remains transparent.
+- A permissive core lowers enterprise adoption friction.
 - Clear legal and engineering boundaries reduce future migration cost.
 
 ### Negative
 
-- License selection requires careful legal review.
-- Maintaining open and commercial modules adds release discipline.
-- Some premium capabilities may require duplicated testing across deployment modes.
+- Apache-2.0 does not prevent competitors from building commercial products on the core.
+- Commercial differentiation must therefore come from execution, services, advanced modules, data/network effects, and product quality.
+- License selection requires a legal/dependency review before public distribution.
 
 ## Next Step
 
-Create the canonical V0.1 domain model and ERD. Licensing should be finalized before the first public distribution release, not before architecture work begins.
+Complete the V0.1 relational model with configurable allocation-policy and profit-allocation entities, then perform the final architecture review before the first migration.
